@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="Search..">
+        <div class="main-div">
+
+            <button id="first-button">
+                <h1 id="fade-out">fade out</h1>
+            </button>
+            <hr>
+            <button id="second-button">
+                <h1 id="append"></h1>
+            </button>
+            <hr>
+
+            <button id="third-button">
+                <h1 id="change-color">change color!!!!!!</h1>
+            </button>
+            <hr>
+        </div>
+        <script>
+            $("#first-button").click(function () {
+                $("#fade-out").fadeOut("fast");
+            });
+            $("#second-button").click(function () {
+                $("#append").fadeOut().fadeIn().append("<b>you are awesome<br></b>");
+            });
+            $("#third-button").click(function () {
+
+                $("#change-color").css("color", "red")
+
+            });
+            $(function () {
+                $("#moreinfo").click(function () {
+                    $("#content").slideDown();
+                })
+            })
+
+        </script>
+        <footer>
+            <div id="togglethis">
+                <button id="moreinfo">More Info !!</button>
+            </div>
+            <div id="content">
+                <button id="kong">www.kongStrong.com<br>thanks for your visitting</button>
+            </div>
+        </footer>
+</body>
+
+</html>
